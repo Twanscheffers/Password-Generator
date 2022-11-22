@@ -1,29 +1,25 @@
 #include <iostream>
 #include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
 
     int cnt;
-    char lower[32] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-    char upper[32];
+    char lower[32], upper[32];
     char syms[10] = {'!','@','#','$','%','&','*'};
     int nums[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
     string passw;
 
-    for(int i = 0; i < sizeof(lower); i++) {
-        upper[i] = (char)toupper(lower[i]);
-        /*alle letters in upper*/
-    }
+    for(int ch = 'a'; ch <= 'z'; ch++) {
+        lower[ch - 'a'] = ch; /*ch - 'a', omdat je geen 0 kan aangeven*/
+        upper[ch - 'a'] = (char)toupper(lower[ch - 'a']);
 
-    cout << "Aantal characters: ";
+    }
+    
+    cout << "Geef aantal characters: ";
     cin >> cnt;
-
-    for(int i = 0; i <= cnt; i++) {
-        
-
-    }
 
     return 0;
     
