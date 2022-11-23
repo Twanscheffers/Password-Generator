@@ -16,7 +16,7 @@ int main() {
 
     }
 
-    cout << "Hoeveel characters lang moet je wachtwoord zijn: ";
+    cout << "Type amount of characters: ";
     cin >> cnt;
 
     char password[36];
@@ -25,7 +25,7 @@ int main() {
 
     }
 
-    cout << "Jouw wachtwoord is: " <<  password << endl;
+    cout << "Your password is: " <<  password << endl;
 
     return 0;  
 }
